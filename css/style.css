@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("landscape.jpg");
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+#quote-box {
+    border-radius: 2%;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 40%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#quote-holder {
+    font-family: "Roboto Slab";
+    border-radius: 15%;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote-author {
+    display: inline-block;
+    width: 85%;
+}
+
+#text {
+    font-size: 2em;
+    margin-bottom: 2.5%;
+}
+
+#author {
+    font-size: 1.75em;
+    float: right;
+}
+
+#buttons {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tweet-quote {
+    background-color: #1da1f2;
+    margin-bottom: 7.5%;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+
+#new-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1da1f2;
+    width: 20%;
+    color: white;
+    height: 35px;
+    font-family: "Roboto";
+    margin-right: 7.5%;
+    margin-bottom: 7.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size: 1.25em;
+    animation-name: unhover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+
+#new-quote:hover {
+  animation-name: hover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+
+#new-quote:active {
+    animation-name: unhover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+
+@keyframes hover {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+}
+
+@keyframes unhover {
+  0% {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 1540px) {
+    #quote-box {
+        height: 60%;
+        width: 67.5%;
+    }
+}
+
+@media (max-width: 750px) {
+    #quote-box {
+        height: 90%;
+        width: 90%;
+    }
+    #new-quote {
+        width: 40%;
+    }
+}
+
+@media (max-height: 900px) {
+    #quote-box {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media (max-height: 900px) and (max-width: 1000px) {
+    #text {
+        font-size: 1.5em;
+    }
+    #author {
+        font-size: 1.25em;
+    }
+}
